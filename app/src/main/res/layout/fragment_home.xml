@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeFrag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    tools:context=".fragments.HomeFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/android_background"
+        android:scaleType="centerCrop" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/totalTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:text="@string/total" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <Button
+                        android:id="@+id/expense_button"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="30dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/red_button"
+                        android:drawableLeft="@drawable/baseline_arrow_upward_24"
+                        android:drawablePadding="10dp"
+                        android:paddingEnd="20dp"
+                        android:text=""
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="normal"
+                        app:backgroundTint="@color/dark_pink"
+                        tools:ignore="RtlSymmetry" />
+
+                    <Button
+                        android:id="@+id/Income_amount"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="30dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/green_button"
+                        android:drawableLeft="@drawable/baseline_arrow_downward_24"
+                        android:paddingStart="20dp"
+                        android:text=""
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="normal"
+                        app:backgroundTint="@color/green"
+                        tools:ignore="RtlSymmetry" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="28dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:text="@string/recent_transactions"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:paddingLeft="15dp">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hideLayout"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/empty_content"
+                    android:visibility="gone"
+                    android:layout_width="80dp"
+                    android:src="@drawable/money_transfer"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="150dp"
+                    />
+
+                <TextView
+                    android:id="@+id/no_trans"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/no_transactions"
+                    android:visibility="gone"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/tap_trans"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/add_one"
+                    android:visibility="gone"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        android:layout_marginTop="5dp"
+        android:paddingHorizontal="15dp"
+        tools:listitem="@layout/fragment_transaction_item" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name"> WalletWave</string>
+
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="Login">Login</string>
+    <string name="NewUser">New User?</string>
+    <string name="signUp">Sign Up</string>
+
+    <string name="homePage">Home</string>
+    <string name="allTrnx">All transactions</string>
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="navDrawerTextOpen">Open</string>
+    <string name="navDrawerTextClose">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enterName">Enter Name</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_email">Enter email</string>
+    <string name="recent_transactions">Recent Transactions</string>
+    <string name="no_transactions">No transactions</string>
+    <string name="add_one">Add one</string>
+    <string name="search">Search</string>
+    <string name="total">Balance (in $):</string>
+    <string name="expense_app">WalletWave</string>
+    <string name="app_description">WalletWave is a expense manager app.In which you can track your daily transaction and also create budget easily and smoothly.</string>
+    <string name="fellow_developers">Our Fellow Developers</string>
+    <string name="satya">Guru Satyavathi Seshanakoti</string>
+    <string name="satya_mail">gseshanakoti0621@conestogac.on.ca</string>
+    <string name="android_code">Android Code</string>
+    <string name="ui_design">UI Design</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="comments">Enter your comment</string>
+    <string name="submit">Submit</string>
+    <string name="select_date">Select Date</string>
+    <string name="expense">Expense</string>
+    <string name="income">Income</string>
+    <string name="notes">Notes</string>
+    <string name="search_transaction">Search Transaction</string>
+    <string name="not_found">No Transaction Found</string>
+    <string name="deleteTran">Deleted Transactions</string>
+    <string name="wallet_wave">Wallet Wave</string>
+    <string name="currency_exchange_rate">Currency Exchange Rate</string>
+    <string name="shanshihan_baskaran">Shanshihan Baskaran</string>
+    <string name="shan_mail">sbaskaran6694@conestogac.on.ca</string>
+    <string name="mihil_mail">mihiljose9366@conestogac.on.ca</string>
+    <string name="mihil_name">Mihil Jose</string>
+    <string name="nihal_mail">nsuneer4136@conestogac.on.ca</string>
+    <string name="nihal_name">Nihal Suneer</string>
+    <string name="_1_cad">1 CAD</string>
+    <string name="add_transaction">Add Transaction</string>
+    <string name="delete_transaction">Delete Transaction</string>
+    <string name="update_transaction">Update Transaction</string>
+    <string name="amount">Amount</string>
+    <string name="exchange_rate">Exchange Rate</string>
+    <string name="currency_exchange">Currency Exchange</string>
+    <string name="country_flag">Country Flag</string>
+    <string name="ratings">Ratings</string>
+    <string name="category">Category</string>
+    <string name="notes_txt">Notes</string>
+    <string name="date">Date</string>
+    <string name="amount_txt">Amount</string>
+
+</resources>

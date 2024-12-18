@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">WalletWaveWear</string>
+    <string name="add_transaction">Add Transaction</string>
+    <string name="amount_hint">Enter Amount</string>
+    <string name="date_hint">Select Date</string>
+    <string name="expense">Expense</string>
+    <string name="income">Income</string>
+    <string name="category_prompt">Select Category</string>
+    <string name="notes_hint">Enter Notes</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_add_expense">Add Transaction</string>
+    <string name="btn_currency_exchange">Currency Exchange</string>
+    <string name="btn_view_transaction">View Transaction</string>
+    <string name="btn_calculator">Expense Calculator</string>
+    <string name="update_transaction">Transaction</string>
+    <string name="hint_bill_amount">Bill Amount</string>
+    <string name="hint_tip_percentage">Tip Percentage</string>
+    <string name="hint_num_people">Number of People</string>
+    <string name="btn_calculate_expense">Calculate Expense</string>
+    <string name="tip_result">Tip Amount: $0.00</string>
+    <string name="each_person_pays">Each Person Pays: $0.00</string>
+    <string name="please_enter_valid_inputs">Please enter valid inputs</string>
+    <string name="currency_not_available_for">"Currency not available for "</string>
+    <string name="select_currency">Select a currency to see the exchange rate</string>
+    <string name="your_transactions">Your Transactions</string>
+    <string name="no_transactions_found">No transactions found</string>
+    <string name="category">Category</string>
+    <string name="notes">Notes</string>
+    <string name="date">Date</string>
+    <string name="amount">+Amount</string>
+</resources>

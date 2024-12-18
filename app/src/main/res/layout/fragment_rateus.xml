@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/android_background"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:padding="10dp"
+        android:text="@string/rate_us" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:progressTint="@color/orange"
+        android:layout_marginTop="24dp"
+        android:stepSize="0.5" />
+
+    <EditText
+        android:id="@+id/commentsEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratingBar"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/comments"
+        android:inputType="textMultiLine"
+        android:minLines="2"/>
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commentsEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/orange"
+        android:text="@string/submit" />
+
+    <TextView
+        android:id="@+id/submittedRatingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submitBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/ratings"
+        android:textSize="18dp"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/listViewRate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/submittedRatingText"
+        android:layout_marginTop="16dp"
+        android:background="@color/white_offside"
+        android:dividerHeight="8dp"
+        android:padding="8dp" />
+
+</RelativeLayout>

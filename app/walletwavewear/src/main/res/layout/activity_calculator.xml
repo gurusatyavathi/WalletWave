@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/android_background"
+        android:scaleType="fitXY" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+
+                <EditText
+                    android:id="@+id/edtBillAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_bill_amount"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp"
+                    android:backgroundTint="@color/blue"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"/>
+
+                <EditText
+                    android:id="@+id/edtTipPercentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_tip_percentage"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:backgroundTint="@color/blue"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/edtBillAmount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"/>
+
+                <EditText
+                    android:id="@+id/edtNumPeople"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_num_people"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:backgroundTint="@color/blue"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/edtTipPercentage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCalculateTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/btn_calculate_expense"
+                    android:textSize="15sp"
+                    android:backgroundTint="@color/blue"
+                    app:strokeWidth="2dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    app:strokeColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/edtNumPeople"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"/>
+
+                <TextView
+                    android:id="@+id/txtTipResult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tip_result"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/btnCalculateTip"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"/>
+
+                <TextView
+                    android:id="@+id/txtEachPersonPays"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/each_person_pays"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/txtTipResult"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</androidx.wear.widget.BoxInsetLayout>

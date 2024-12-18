@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.UpdateTransactionActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/android_background"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/update_transaction"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/updateAmount"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_background"
+                android:elevation="4dp"
+                android:fontFamily="sans-serif"
+                android:hint="@string/amount_hint"
+                android:inputType="numberDecimal"
+                android:paddingLeft="5dp"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/updateDate"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@drawable/rounded_background"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:paddingLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:hint="@string/date_hint"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupTransactionType"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonExpense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/expense"
+                    android:textColor="@color/black"
+                    android:buttonTint="@drawable/radio_selector"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonIncome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/income"
+                    android:textColor="@color/black"
+                    android:buttonTint="@drawable/radio_selector"
+                    android:textSize="12sp" />
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_background"
+                android:elevation="4dp"
+                android:prompt="@string/category_prompt" />
+
+            <EditText
+                android:id="@+id/updateNotes"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_background"
+                android:elevation="4dp"
+                android:fontFamily="sans-serif"
+                android:hint="@string/notes_hint"
+                android:paddingLeft="5dp"
+                android:textSize="12sp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/blue"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/btn_update"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/blue"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/btn_delete"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.wear.widget.BoxInsetLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+    tools:context=".fragments.TransactionFragment">
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:padding="10dp"
+        android:text="@string/update_transaction" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/amountInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/amount">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/updateAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:textCursorDrawable="@color/orange" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dateInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/date">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/updateDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="numberDecimal"
+                android:textCursorDrawable="@color/orange" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <RadioGroup
+            android:id="@+id/radioGroupTransactionType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+            <RadioButton
+                android:id="@+id/radioButtonExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/orange"
+                android:text="@string/expense" />
+            <RadioButton
+                android:id="@+id/radioButtonIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/orange"
+                android:text="@string/income" />
+        </RadioGroup>
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/notesInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/notes">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/updateNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="textMultiLine"
+                android:minLines="2"
+                android:textCursorDrawable="@color/orange" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
